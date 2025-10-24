@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Urbanist", sans-serif;
+}
+
+@layer utilities {
+  .cw-container {
+    @apply 2xl:max-w-screen-2xl 2xl:mx-auto;
+  }
+}
+
+
