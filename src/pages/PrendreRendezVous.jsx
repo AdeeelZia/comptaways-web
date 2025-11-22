@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Heading from "../components/common/Heading";
 import Button from "../components/common/Button";
 import Input from "../components/common/InputField";
@@ -35,7 +36,9 @@ const PrendreRendezVous = () => {
           />
 
           <div className="flex justify-center">
-            <Button variant="primary">Envoyer mon message !</Button>
+            <Link to={"/ConfirmationContact"}>
+              <Button variant="primary">Envoyer mon message !</Button>
+            </Link>
           </div>
         </form>
       </div>

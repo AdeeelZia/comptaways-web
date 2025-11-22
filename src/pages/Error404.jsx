@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Heading from "../components/common/Heading";
 import Button from "../components/common/Button";
 
@@ -21,7 +22,9 @@ const PageNotFound = () => {
           La page que vous recherchez n’existe pas ou est introuvable. Nous
           faisons notre maximum pour résoudre le problème.
         </p>
+        <Link to={"/"}>
         <Button variant="primary">Retourner à l’accueil</Button>
+        </Link>
       </div>
     </section>
   );

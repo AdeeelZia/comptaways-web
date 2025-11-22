@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Button from "../components/common/Button";
 import Banner from "../components/Banner";
+import Button from "../components/common/Button";
 
 const Header = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -23,7 +23,7 @@ const Header = () => {
         className="w-full sticky top-0 bg-white z-50"
         style={{ boxShadow: "0px 0.41px 3.05px #0000000F" }}
       >
-        <div className="cw-container flex items-center justify-between p-2">
+        <div className="cw-container flex items-center justify-between p-2 sm:px-4">
           <Link to="/" className="flex items-center ml-2">
             <img
               src="/favicons/logo.svg"
@@ -49,7 +49,7 @@ const Header = () => {
             <button
               type="button"
               aria-label="Compte utilisateur"
-              className="p-2 bg-[#2AD884] rounded-full text-white"
+              className="p-2 bg-[#2AD884] rounded-full text-white lg:mr-3"
             >
               <img src="/favicons/users.svg" alt="Icône utilisateur" />
             </button>

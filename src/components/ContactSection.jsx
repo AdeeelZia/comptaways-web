@@ -1,122 +1,94 @@
-import React from "react"
+import React from "react";
+import Heading from "../components/common/Heading";
+import Button from "./common/Button";
+import Input from "../components/common/InputField";
 
-export default function ContactSection({ formData, onInputChange, onSubmit }) {
+export default function ContactSection() {
   return (
-    <section className="mb-8 lg:mb-0">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-          {/* Left side - Images */}
-          <div className="hidden lg:flex items-center justify-center">
-            <div className="relative w-full max-w-sm h-96">
-              {/* Circular image container */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-64 h-80 bg-gradient-to-br from-gray-300 to-gray-400 rounded-full flex items-center justify-center overflow-hidden">
-                  <div className="w-full h-full bg-gray-300 rounded-full flex items-center justify-center text-6xl">
-                    👨‍💼
-                  </div>
-                </div>
-              </div>
-              {/* Smiley face overlay */}
-              <div className="absolute bottom-12 right-0 w-20 h-20 bg-yellow-300 rounded-full flex items-center justify-center text-4xl shadow-lg z-10">
-                😊
-              </div>
+    <section
+      id="contact"
+      className="cw-container py-[30px] px-[36.5px] lg:px-12 scroll-mt-20"
+      aria-labelledby="contact-heading"
+    >
+      <div className="lg:flex lg:items-center lg:gap-10">
+        {/* Left Image Section */}
+        <div className="hidden lg:flex lg:w-1/2 gap-[30px]">
+          <img
+            src="/images/contact1.png"
+            alt="Person working on a project"
+            className="rounded-[220px] w-52 xl:w-[297px] h-[642px] object-cover"
+            loading="lazy"
+          />
+          <div className="relative">
+            <img
+              src="/images/contact2.jpg"
+              alt="Discussion during a meeting"
+              className="rounded-[220px] w-52 xl:w-[297px] h-[642px] object-cover mt-[82px]"
+              loading="lazy"
+            />
+            <div className="absolute top-10 left-0">
+              <img
+                src="/favicons/copie2.svg"
+                alt="Decorative element"
+                className="w-28 xl:w-auto"
+                loading="lazy"
+              />
             </div>
           </div>
+        </div>
 
-          {/* Right side - Form */}
-          <div className="flex flex-col justify-start">
-            {/* Header */}
-            <div className="mb-8">
-              <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                <span className="text-2xl">💬</span>
-                Discutons de votre projet
-              </h2>
-              <p className="text-gray-600 text-sm lg:text-base leading-relaxed">
-                Nous accompagnons les acteurs du secteur différemment. Nous sommes ravis d'échanger avec vous, sur votre
-                projet. Nous serons ravis d'échanger avec vous, sur votre projet. Nous serons ravis d'échanger avec
-                vous, sur votre projet.
-              </p>
+        {/* Right Form Section */}
+        <div className="flex flex-col lg:w-1/2 mt-10 lg:mt-0">
+          <header>
+            <Heading
+              as="h2"
+              id="contact-heading"
+              className="text-[25px] lg:text-[40px] text-left mb-6 lg:mb-10"
+            >
+              💬 Discutons de votre projet
+            </Heading>
+            <p className="text-[#4C4C4C] text-[15px] lg:text-base leading-relaxed mb-6 lg:mb-10">
+              Nous accompagnons tous les secteurs d'activité (actuellement près
+              de <strong>60 secteurs différents</strong>). Nous serons ravis
+              d'échanger avec vous sur votre projet et de vous accompagner vers
+              la réussite.
+            </p>
+          </header>
+
+          <form
+            className="w-full flex flex-col space-y-6"
+            onSubmit={(e) => e.preventDefault()}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Input label="Nom" placeholder="Votre nom" required />
+              <Input label="Prénom" placeholder="Votre prénom" required />
+              <Input
+                label="Téléphone"
+                placeholder="Votre n° de téléphone"
+                type="tel"
+              />
+              <Input
+                label="Email"
+                placeholder="Votre adresse email"
+                type="email"
+                required
+              />
             </div>
 
-            {/* Form */}
-            <form onSubmit={onSubmit} className="space-y-4 lg:space-y-5">
-              {/* Name and Phone Row */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Votre nom
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData}
-                    onChange={onInputChange}
-                    placeholder="Votre nom"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 text-sm"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Votre n° de téléphone
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData}
-                    onChange={onInputChange}
-                    placeholder="Votre n° de téléphone"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 text-sm"
-                  />
-                </div>
-              </div>
+            <Input
+              as="textarea"
+              label="Message"
+              placeholder="Votre message"
+              className="w-full !rounded-[20px] pb-32 resize-none"
+              required
+            />
 
-              {/* Email Row */}
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Votre adresse email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData}
-                  onChange={onInputChange}
-                  placeholder="Votre adresse email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 text-sm"
-                />
-              </div>
-
-              {/* Message Row */}
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Votre message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData}
-                  onChange={onInputChange}
-                  placeholder="Votre message"
-                  rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 text-sm resize-none"
-                />
-              </div>
-
-              {/* Submit Button */}
-              <div className="pt-4">
-                <button
-                  type="submit"
-                  className="w-full sm:w-auto px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-full transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
-                >
-                  Envoyer mon message!
-                </button>
-              </div>
-            </form>
-          </div>
+            <Button variant="primary" type="submit" className="max-w-fit">
+              Envoyer mon message&nbsp;!
+            </Button>
+          </form>
         </div>
       </div>
     </section>
-  )
+  );
 }

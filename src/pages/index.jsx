@@ -11,14 +11,14 @@ import PricingSection from "../components/PricingSection";
 const HomePage = () => {
   return (
     <>
-    <PricingSection />
-    <SerenityStepsSection />
-    <SupportSection />
-    <EntrepreneursSection />
-    <ClientReviewsSection />
-    <FeaturesSection />
-    <PartnerSection />
-    <ContactSection />
+      {/* <PricingSection /> */}
+      <SerenityStepsSection />
+      <SupportSection />
+      <EntrepreneursSection />
+      <ClientReviewsSection />
+      <FeaturesSection />
+      <PartnerSection />
+      <ContactSection />
     </>
   );
 };
