@@ -1,9 +1,10 @@
 import React from "react";
+import Container from "../components/container";
 
 const Banner = () => {
   return (
     <div className="hidden lg:block bg-[#C9B2FF]">
-      <div className="cw-container flex justify-between items-center h-7 px-[3.813rem]">
+      <Container className="flex justify-between items-center h-7 px-[3.813rem]">
         <div className="flex-1"></div>
         <p className="text-sm font-normal mr-24 text-[#1D1D1C]">
           Offre du mois : 3 mois de comptabilité offerte pour tout parrainage 🚀
@@ -19,7 +20,7 @@ const Banner = () => {
             />
           </p>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };

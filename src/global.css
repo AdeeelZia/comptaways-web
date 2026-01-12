@@ -4,8 +4,10 @@
   font-family: "Urbanist", sans-serif;
 }
 
-@layer utilities {
-  .cw-container {
-    @apply container mx-auto;
-  }
+.circle {
+  position: absolute;
+  width: 540px;
+  height: 540px;
+  border-radius: 50%;
+  opacity: 0.3;
 }

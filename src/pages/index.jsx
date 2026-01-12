@@ -7,18 +7,19 @@ import FeaturesSection from "../components/FeaturesSection";
 import SupportSection from "../components/SupportSection";
 import SerenityStepsSection from "../components/SerenityStepsSection";
 import PricingSection from "../components/PricingSection";
+import Container from "../components/container";
 
 const HomePage = () => {
   return (
     <>
+      {/* <SerenityStepsSection /> */}
       {/* <PricingSection /> */}
-      <SerenityStepsSection />
-      <SupportSection />
-      <EntrepreneursSection />
-      <ClientReviewsSection />
-      <FeaturesSection />
-      <PartnerSection />
-      <ContactSection />
+      {/* <SupportSection /> */}
+      {/* <EntrepreneursSection /> */}
+      {/* <ClientReviewsSection /> */}
+      {/* <FeaturesSection /> */}
+      {/* <PartnerSection /> */}
+      {/* <ContactSection /> */}
     </>
   );
 };

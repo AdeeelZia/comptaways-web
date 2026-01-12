@@ -29,22 +29,22 @@ const SerenityStepsSection = () => {
   ];
 
   return (
-    <section className="cw-container px-5 my-24">
-      <div className="">
-        <Heading as="h2" className="text-[25px]">
-          {" "}
-          🤝️‍ Un démarrage en toute sérénité{" "}
+    <section className="relative overflow-hidden my-24">
+      <div className="px-5">
+        <Heading as="h2" className="text-[25px] mb-[87px]">
+          🤝️‍ Un démarrage en toute sérénité
         </Heading>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[30px] mb-[30px] mx-auto">
+          <div className="circle right-0 top-8 bg-[#FFE34F]"></div>
+        <div className="grid grid-cols-1 md:grid-cols-3 place-items-center lg:mx-32 gap-[30px] mb-[30px]">
           {steps.map((step) => (
             <div
               key={step.number}
-              className="flex flex-col items-center px-[11px] py-[20px] max-w-[315px] h-[288px] rounded-[18px]"
+              className="flex flex-col items-center px-[11px] py-6 max-w-[315px]  rounded-[18px]"
               style={{ boxShadow: "0px 2px 15px 0px #0000000F" }}
             >
               <Heading
                 as="h2"
-                className={`flex items-center justify-center w-14 h-14 rounded-md text-white font-bold text-lg mb-4 ${step.numberColor}`}
+                className={`flex items-center justify-center w-10 h-10 rounded-md text-white font-bold text-lg mb-4 ${step.numberColor}`}
               >
                 {step.number}
               </Heading>

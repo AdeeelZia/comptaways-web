@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Container from "../components/container";
 import Banner from "../components/Banner";
 import Button from "../components/common/Button";
 
@@ -23,7 +24,7 @@ const Header = () => {
         className="w-full sticky top-0 bg-white z-50"
         style={{ boxShadow: "0px 0.41px 3.05px #0000000F" }}
       >
-        <div className="cw-container flex items-center justify-between p-2 sm:px-4">
+        <Container className="flex items-center justify-between p-2 sm:px-4">
           <Link to="/" className="flex items-center ml-2">
             <img
               src="/favicons/logo.svg"
@@ -70,7 +71,7 @@ const Header = () => {
               <img src="/favicons/menu-hamburger.svg" alt="Icône menu" />
             </button>
           </div>
-        </div>
+        </Container>
         <div
           className={`fixed top-0 right-0 w-3/4 h-full bg-white z-50 shadow-lg transform transition-transform duration-300 ease-in-out ${
             isMobileNavOpen ? "translate-x-0" : "translate-x-full"

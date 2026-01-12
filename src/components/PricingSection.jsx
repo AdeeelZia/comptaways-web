@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Heading from "../components/common/Heading";
 import Button from "../components/common/Button";
 
-export default function PricingSection() {
+const PricingSection = () => {
   const [activeTab, setActiveTab] = useState("particuliers");
 
   const tabs = [
@@ -85,4 +85,6 @@ export default function PricingSection() {
       </div>
     </section>
   );
-}
+};
+
+export default PricingSection;

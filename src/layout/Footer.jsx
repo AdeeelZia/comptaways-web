@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Container from "../components/container";
 
 const footerLinks = [
   {
@@ -94,8 +95,8 @@ export const FooterSection = ({ title, links }) => {
 const Footer = () => {
   return (
     <footer>
-      <div className="cw-container">
-        <div className="relative top-20 py-[30px] px-[36.5px] lg:flex md:gap-4 lg:gap-8 xl:gap-[200px] md:justify-center rounded-t-[30px] lg:rounded-[30px] lg:mx-8 xl:mx-20 bg-[#EAFBF3]">
+      <Container>
+        <div className="relative top-20 py-[30px] px-[36.5px] lg:flex md:gap-4 lg:gap-8 xl:gap-[100px] 2xl:gap-[200px] md:justify-center rounded-t-[30px] lg:rounded-[30px] lg:mx-8 xl:mx-20 bg-[#EAFBF3]">
         <div className="text-start mb-[35px] lg:max-w-[300px]">
           <img
             src="/favicons/logo.svg"
@@ -121,7 +122,7 @@ const Footer = () => {
           <p>Made with 💚 by 4Beez - Agence de communication</p>
         </div>
       </div>
-      </div>
+      </Container>
 
       <div className="hidden lg:block pt-20 bg-[#F0F0F0] rounded-t-[30px]">
         <div className="text-[14px] font-semibold py-[30px] text-center text-[#4C4C4C]">
